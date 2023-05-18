@@ -18,7 +18,7 @@ public class main extends Application {
         stage.show();
         databaseConnection db = new databaseConnection();
         db.connect();
-
+//test
     }
 
     public static void main(String[] args) {
