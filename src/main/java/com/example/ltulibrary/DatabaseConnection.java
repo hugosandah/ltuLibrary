@@ -5,14 +5,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class databaseConnection {
-    static String name = "";
-    static String bookNames = "";
+public class DatabaseConnection {
     static Connection conn = null;
-    static Statement st = null;
+    private static Statement st = null;
 
-    public static void connect() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/ltuLibrary"; // Replace with your database URL
+    public static Connection connect() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/ltuLibrarySql"; // Replace with your database URL
         String username = "root"; // Replace with your MySQL username
         String password = "T3ams0t1s!"; // Replace with your MySQL password
 
@@ -24,5 +22,11 @@ public class databaseConnection {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        return conn;
+    }
+
+    public Connection getConnection() {
+        return conn;
     }
 }

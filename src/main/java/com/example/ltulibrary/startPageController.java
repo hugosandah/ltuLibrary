@@ -29,6 +29,11 @@ public class startPageController  implements Initializable {
     private Button searchButton;
     @FXML
     private Button adminButton;
+    @FXML
+    private Button returnBookButton;
+    @FXML
+    private Button returnDvdButton;
+
 
 
     @FXML
@@ -61,6 +66,20 @@ public class startPageController  implements Initializable {
         Parent myPagesParent = fxmlLoader.load();
         Scene myPagesScene = new Scene(myPagesParent);
         Stage currentStage = (Stage) adminButton.getScene().getWindow();
+        currentStage.setScene(myPagesScene);
+    }
+    public void onReturnBook1() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("returnBook.fxml"));
+        Parent myPagesParent = fxmlLoader.load();
+        Scene myPagesScene = new Scene(myPagesParent);
+        Stage currentStage = (Stage) returnBookButton.getScene().getWindow();
+        currentStage.setScene(myPagesScene);
+    }
+    public void onReturnDvd1() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("returnBook.fxml"));
+        Parent myPagesParent = fxmlLoader.load();
+        Scene myPagesScene = new Scene(myPagesParent);
+        Stage currentStage = (Stage) returnDvdButton.getScene().getWindow();
         currentStage.setScene(myPagesScene);
     }
 }

@@ -90,7 +90,7 @@ public class adminDVDController implements Initializable {
 
         try {
             DatabaseConnection.connect();
-            PreparedStatement statement = DatabaseConnection.conn.prepareStatement("DELETE FROM dvd WHERE barcode = ?");
+            PreparedStatement statement = DatabaseConnection.conn.prepareStatement("DELETE FROM DVD WHERE barcode_DVD = ?");
             statement.setString(1, barcode);
             int rowsAffected = statement.executeUpdate();
             if (rowsAffected > 0) {
