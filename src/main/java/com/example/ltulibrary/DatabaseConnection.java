@@ -12,7 +12,7 @@ public class DatabaseConnection {
     public static Connection connect() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/ltuLibrarySql"; // Replace with your database URL
         String username = "root"; // Replace with your MySQL username
-        String password = "T3ams0t1s!"; // Replace with your MySQL password
+        String password = ""; // Replace with your MySQL password
 
         // Establishing the connection
         try {
